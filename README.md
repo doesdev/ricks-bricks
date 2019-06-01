@@ -4,10 +4,10 @@
 
 ## What is it this?
 
-Simply put it's yet another throttling utility. Specifically, I made it
-for rate limiting web requests by IP. It has plenty of other potential
-uses, but more than anything I wanted the logic isolated and reusable.
-So here it is in module form.
+Simply put it's yet another throttling utility. Specifically, I made to restart
+a server process if ECONNREFUSED is encountered by the reverse proxy beyond the
+threshold. It has plenty of other potential uses, but more than anything I
+wanted the logic isolated and reusable. So here it is in module form.
 
 ## Double you tea eff is that name 'bout brah?
 

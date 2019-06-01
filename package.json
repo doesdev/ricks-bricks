@@ -1,11 +1,13 @@
 {
   "name": "ricks-bricks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Run cb if called X times within X ms and hasn't been run in X ms",
   "main": "index.js",
-  "files": ["index.js"],
+  "files": [
+    "index.js"
+  ],
   "scripts": {
-    "test": "ava --verbose"
+    "test": "node test.js --verbose"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,7 @@
   },
   "homepage": "https://github.com/doesdev/ricks-bricks#readme",
   "devDependencies": {
-    "ava": "^0.25.0",
-    "pico-ms": "^1.0.0"
+    "mvt": "^3.0.0",
+    "pico-ms": "^1.1.1"
   }
 }
