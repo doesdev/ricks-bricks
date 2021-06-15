@@ -7,16 +7,16 @@ const delay = async (d = 500) => {
   await new Promise((resolve, reject) => setTimeout(resolve, d))
 }
 
-runTests(`Testing ricks-bricks`, async () => {
-  const testA = `rb only calls at threshold for signature`
+runTests('Testing ricks-bricks', async () => {
+  const testA = 'rb only calls at threshold for signature'
   await testAsync(testA, async () => {
-    let differentSig = 'differentSig'
+    const differentSig = 'differentSig'
     let called = false
-    let cb = async () => {
+    const cb = async () => {
       called = !called
       return Promise.resolve()
     }
-    let rbOpts = { threshold: 3 }
+    const rbOpts = { threshold: 3 }
     if (called) return false
 
     // call with sig 2 times, 1 less than threshold
@@ -36,14 +36,14 @@ runTests(`Testing ricks-bricks`, async () => {
     return called
   })
 
-  const testB = `rb does not call if threshold met outside resetAfter`
+  const testB = 'rb does not call if threshold met outside resetAfter'
   await testAsync(testB, async () => {
     let called = false
-    let cb = async () => {
+    const cb = async () => {
       called = !called
       return Promise.resolve()
     }
-    let rbOpts = { threshold: 3, resetAfter: ms('5sec') }
+    const rbOpts = { threshold: 3, resetAfter: ms('5sec') }
     if (called) return false
 
     // call with sig 2 times, 1 less than threshold
@@ -68,14 +68,14 @@ runTests(`Testing ricks-bricks`, async () => {
     return called
   })
 
-  const testC = `rb shouldn't call again within throttle period`
+  const testC = 'rb shouldn\'t call again within throttle period'
   await testAsync(testC, async () => {
     let called = false
-    let cb = async () => {
+    const cb = async () => {
       called = !called
       return Promise.resolve()
     }
-    let rbOpts = { threshold: 3, throttle: ms('5sec') }
+    const rbOpts = { threshold: 3, throttle: ms('5sec') }
     if (called) return false
 
     // call with sig 3 times, should call

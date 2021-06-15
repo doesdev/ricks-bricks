@@ -114,6 +114,10 @@ main()
   - **resetAfter** *(Number - milliseconds - optional)*
     - Reset tracking once this many ms have passed since previous call
 
+#### `rb.cleanupInterval = ms`
+- **ms** *(Number - milliseconds - optional [defaults to 30000 (30secs)])*
+  - Clear stale objects from tracking object every `ms` millseconds
+
 ## License
 
 MIT © [Andrew Carpenter](https://github.com/doesdev)
