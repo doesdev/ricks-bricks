@@ -37,6 +37,15 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # ignore secrets and configs that might contain secrets
 secrets.json
 _secrets.json

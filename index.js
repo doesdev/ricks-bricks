@@ -1,5 +1,3 @@
-'use strict'
-
 const track = {}
 const defaultCleanupInterval = 30000
 const lastClean = Date.now()
@@ -61,4 +59,4 @@ function rbCleanup (now) {
 
 ricksBricks.cleanupInterval = defaultCleanupInterval
 
-module.exports = ricksBricks
+export default ricksBricks
